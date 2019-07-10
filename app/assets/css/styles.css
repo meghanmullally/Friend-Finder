@@ -1,3 +1,27 @@
 * {
   box-sizing: border-box;
 }
+
+#survey-jumbo {
+  background-image: url("https://images.pexels.com/photos/1645634/pexels-photo-1645634.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  background-position: fixed;
+  color: whitesmoke;
+  font-weight: bolder;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+#form-container {
+ margin: 0 auto;
+ padding: 0 auto;
+ padding-bottom: 20px;
+ border: lightslategray solid 2px;
+
+}
+
+label {
+  font-weight: bold;
+}
