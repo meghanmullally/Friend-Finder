@@ -33,13 +33,13 @@
       <div class="form-row">
         <div class="col-md-6">
           <label for="inputName">Name (Required)</label>
-          <input type="text" class="form-control" placeholder="">
+          <input type="text" class="form-control" class="validate" required>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputPhoto">Link to Photo Image (Required)</label>
-          <input type="photo" class="form-control" id="inputPhoto" placeholder="">
+          <input type="photo" class="form-control" id="inputPhoto" class="validate" required>
         </div>
 
       </div>
@@ -48,7 +48,7 @@
         <div class="form-group col-md-4">
           <label for="question1">Question 1</label>
           <p>You prefer to stay in on the weekends</p>
-          <select class="custom-select mr-sm-2" id="question1">
+          <select class="custom-select mr-sm-2" class="browser-default" id="question1">
             <option selected>Select an Option</option>
             <option value="1">1(Strongly Disagree)</option>
             <option value="2">2</option>
@@ -62,7 +62,7 @@
           <div class="form-group col-md-4">
           <label for="question2">Question 2</label>
           <p>You like the outdoors example: camping and hiking</p>
-          <select class="custom-select mr-sm-2" id="question2">
+          <select class="custom-select mr-sm-2" class="browser-default" id="question2">
             <option selected>Select an Option</option>
             <option value="1">1(Strongly Disagree)</option>
             <option value="2">2</option>
@@ -76,7 +76,7 @@
           <div class="form-group col-md-4">
           <label for="question3">Question 3</label>
           <p>You come off too strong</p>
-          <select class="custom-select mr-sm-2" id="question3">
+          <select class="custom-select mr-sm-2" class="browser-default" id="question3">
             <option selected>Select an Option</option>
             <option value="1">1(Strongly Disagree)</option>
             <option value="2">2</option>
@@ -90,7 +90,7 @@
           <div class="form-group col-md-4">
           <label for="question4">Question 4</label>
           <p>People tend to say you eat too much</p>
-          <select class="custom-select mr-sm-2" id="question4">
+          <select class="custom-select mr-sm-2" class="browser-default" id="question4">
             <option selected>Select an Option</option>
             <option value="1">1(Strongly Disagree)</option>
             <option value="2">2</option>
@@ -104,7 +104,7 @@
           <div class="form-group col-md-4">
           <label for="question5">Question 5</label>
           <p>You enjoy going to a coffee shop and reading a nice book</p>
-          <select class="custom-select mr-sm-2" id="question5">
+          <select class="custom-select mr-sm-2" class="browser-default" id="question5">
             <option selected>Select an Option</option>
             <option value="1">1(Strongly Disagree)</option>
             <option value="2">2</option>
@@ -118,7 +118,7 @@
           <div class="form-group col-md-4">
           <label for="question6">Question 6</label>
           <p>You rarely get upset over things</p>
-          <select class="custom-select mr-sm-2" id="question6">
+          <select class="custom-select mr-sm-2" class="browser-default" id="question6">
             <option selected>Select an Option</option>
             <option value="1">1(Strongly Disagree)</option>
             <option value="2">2</option>
@@ -132,7 +132,7 @@
           <div class="form-group col-md-4">
           <label for="question7">Question 7</label>
           <p>You like to travel</p>
-          <select class="custom-select mr-sm-2" id="question7">
+          <select class="custom-select mr-sm-2" class="browser-default" id="question7">
             <option selected>Select an Option</option>
             <option value="1">1(Strongly Disagree)</option>
             <option value="2">2</option>
@@ -146,7 +146,7 @@
           <div class="form-group col-md-4">
           <label for="question8">Question 8</label>
           <p>You feel more energetic after spending time in a big group</p>
-          <select class="custom-select mr-sm-2" id="question8">
+          <select class="custom-select mr-sm-2" class="browser-default" id="question8">
             <option selected>Select an Option</option>
             <option value="1">1(Strongly Disagree)</option>
             <option value="2">2</option>
@@ -160,7 +160,7 @@
           <div class="form-group col-md-4">
           <label for="question9">Question 9</label>
           <p>You are more of a logical person than emotional</p>
-          <select class="custom-select mr-sm-2" id="question9">
+          <select class="custom-select mr-sm-2" class="browser-default"  id="question9">
             <option selected>Select an Option</option>
             <option value="1">1(Strongly Disagree)</option>
             <option value="2">2</option>
@@ -174,7 +174,7 @@
           <div class="form-group col-md-4">
           <label for="question10">Question 10</label>
           <p>Do you think of yourself as a spontaneous person?</p>
-          <select class="custom-select mr-sm-2" id="question10">
+          <select class="custom-select mr-sm-2" class="browser-default" id="question10">
             <option selected>Select an Option</option>
             <option value="1">1(Strongly Disagree)</option>
             <option value="2">2</option>
@@ -184,7 +184,7 @@
           </select>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" id="submitBtn" class="btn btn-primary">Submit</button>
 
 
     </form>
@@ -217,7 +217,33 @@
 </html>
 
 <script>
+$(document).ready(function(){
 
+$("#submitBtn").on("click", function() {
+
+// form validating 
+function validateForm() {
+
+  var isValid = true;
+  $(".validate").each(function() {
+    if ($(this).val() === ''){
+      isValid = false;
+    }
+  });
+
+  $(".browswer-default").each(function(){
+    if ($(this).val() === ''){
+      isValid = false;
+    }
+  });
+
+  return isValid;
+}
+
+
+})
+
+})
 var newFriend = {
  Name: $("name").val().trim(),
  Photo: $("photo").val().trim(),
@@ -233,7 +259,6 @@ var newFriend = {
           $("#question9").val(),
           $("#question10").val()       
         ]
-
 }
 
 
