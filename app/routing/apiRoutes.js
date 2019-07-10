@@ -39,10 +39,10 @@ module.exports = function (app) {
     for (var i = 0; i < friends.length; i++) {
       // difference between questions 
       var diff = 0;
-      for (var y = 0; y < userRep.length; y++) {
+      for (var j = 0; j < userRep.length; j++) {
 
         // math abs returns the absolute value of a number 
-        diff += Math.abs(parseInt(friends[i].scores[y]) - parseInt(userRep[y]));
+        diff += Math.abs(parseInt(friends[i].scores[j]) - parseInt(userRep[j]));
       }
 
       if (diff < totalDiff) {
