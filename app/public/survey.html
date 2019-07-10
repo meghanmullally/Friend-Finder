@@ -11,19 +11,19 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<!--CSS-->
-<link rel="stylesheet" href="/app/assets/css/styles.css">
+  <!--CSS-->
+  <link rel="stylesheet" href="/app/assets/css/styles.css">
 
 </head>
 
 <body>
 
 
-<div class="jumbotron jumbotron-fluid" id="survey-jumbo">
-  <div class="container">
-    <h1 class="display-3">Friend Finder Survey</h1>
+  <div class="jumbotron jumbotron-fluid" id="survey-jumbo">
+    <div class="container">
+      <h1 class="display-3">Friend Finder Survey</h1>
+    </div>
   </div>
-</div>
 
   <div class="container" id="form-container">
 
@@ -59,7 +59,7 @@
         </div>
       </div>
       <div class="form-group">
-          <div class="form-group col-md-4">
+        <div class="form-group col-md-4">
           <label for="question2">Question 2</label>
           <p>You like the outdoors example: camping and hiking</p>
           <select class="custom-select mr-sm-2" class="browser-default" id="question2">
@@ -73,7 +73,7 @@
         </div>
       </div>
       <div class="form-group">
-          <div class="form-group col-md-4">
+        <div class="form-group col-md-4">
           <label for="question3">Question 3</label>
           <p>You come off too strong</p>
           <select class="custom-select mr-sm-2" class="browser-default" id="question3">
@@ -87,7 +87,7 @@
         </div>
       </div>
       <div class="form-group">
-          <div class="form-group col-md-4">
+        <div class="form-group col-md-4">
           <label for="question4">Question 4</label>
           <p>People tend to say you eat too much</p>
           <select class="custom-select mr-sm-2" class="browser-default" id="question4">
@@ -101,7 +101,7 @@
         </div>
       </div>
       <div class="form-group">
-          <div class="form-group col-md-4">
+        <div class="form-group col-md-4">
           <label for="question5">Question 5</label>
           <p>You enjoy going to a coffee shop and reading a nice book</p>
           <select class="custom-select mr-sm-2" class="browser-default" id="question5">
@@ -115,7 +115,7 @@
         </div>
       </div>
       <div class="form-group">
-          <div class="form-group col-md-4">
+        <div class="form-group col-md-4">
           <label for="question6">Question 6</label>
           <p>You rarely get upset over things</p>
           <select class="custom-select mr-sm-2" class="browser-default" id="question6">
@@ -129,7 +129,7 @@
         </div>
       </div>
       <div class="form-group">
-          <div class="form-group col-md-4">
+        <div class="form-group col-md-4">
           <label for="question7">Question 7</label>
           <p>You like to travel</p>
           <select class="custom-select mr-sm-2" class="browser-default" id="question7">
@@ -143,7 +143,7 @@
         </div>
       </div>
       <div class="form-group">
-          <div class="form-group col-md-4">
+        <div class="form-group col-md-4">
           <label for="question8">Question 8</label>
           <p>You feel more energetic after spending time in a big group</p>
           <select class="custom-select mr-sm-2" class="browser-default" id="question8">
@@ -157,10 +157,10 @@
         </div>
       </div>
       <div class="form-group">
-          <div class="form-group col-md-4">
+        <div class="form-group col-md-4">
           <label for="question9">Question 9</label>
           <p>You are more of a logical person than emotional</p>
-          <select class="custom-select mr-sm-2" class="browser-default"  id="question9">
+          <select class="custom-select mr-sm-2" class="browser-default" id="question9">
             <option selected>Select an Option</option>
             <option value="1">1(Strongly Disagree)</option>
             <option value="2">2</option>
@@ -171,7 +171,7 @@
         </div>
       </div>
       <div class="form-group">
-          <div class="form-group col-md-4">
+        <div class="form-group col-md-4">
           <label for="question10">Question 10</label>
           <p>Do you think of yourself as a spontaneous person?</p>
           <select class="custom-select mr-sm-2" class="browser-default" id="question10">
@@ -194,8 +194,9 @@
 
 
   <div class="footer navbar-fixed-bottom" id="survey-footer">
-      <a href="/api/friends">API Friend List</a> | <a href="https://github.com/meghanmullally/Friend-Finder">Github Repo</a> | <a href="https://github.com/meghanmullally/Friend-Finder">Heroku Link</a>
-</div>
+    <a href="/api/friends">API Friend List</a> | <a href="https://github.com/meghanmullally/Friend-Finder">Github
+      Repo</a> | <a href="https://github.com/meghanmullally/Friend-Finder">Heroku Link</a>
+  </div>
 
 
   <!-- Optional JavaScript -->
@@ -217,50 +218,76 @@
 </html>
 
 <script>
-$(document).ready(function(){
+  $(document).ready(function () {
 
-$("#submitBtn").on("click", function() {
+    $("#submitBtn").on("click", function () {
 
-// form validating 
-function validateForm() {
+      // form validating 
+      function validateForm() {
 
-  var isValid = true;
-  $(".validate").each(function() {
-    if ($(this).val() === ''){
-      isValid = false;
-    }
-  });
+        var isValid = true;
+        $(".validate").each(function () {
+          if ($(this).val() === '') {
+            isValid = false;
+          }
+        });
 
-  $(".browswer-default").each(function(){
-    if ($(this).val() === ''){
-      isValid = false;
-    }
-  });
+        $(".browswer-default").each(function () {
+          if ($(this).val() === '') {
+            isValid = false;
+          }
+        });
 
-  return isValid;
-}
+        return isValid;
+      }
 
+      if (validateForm() === true) {
+        var newFriend = {
+          Name: $("name").val().trim(),
+          Photo: $("photo").val().trim(),
+          Score: [
+            $("#question1").val(),
+            $("#question2").val(),
+            $("#question3").val(),
+            $("#question4").val(),
+            $("#question5").val(),
+            $("#question6").val(),
+            $("#question7").val(),
+            $("#question8").val(),
+            $("#question9").val(),
+            $("#question10").val()
+          ]
+        };
 
-})
+        // grab current URL of web
 
-})
-var newFriend = {
- Name: $("name").val().trim(),
- Photo: $("photo").val().trim(),
- Score:  [
-          $("#question1").val(),
-          $("#question2").val(),
-          $("#question3").val(),
-          $("#question4").val(),
-          $("#question5").val(),
-          $("#question6").val(),
-          $("#question7").val(),
-          $("#question8").val(),
-          $("#question9").val(),
-          $("#question10").val()       
-        ]
-}
+        var currentURL = window.location.origin;
 
+        //AJAX posts the data to friends API.
+        $.post(currentURL + "/api/friends", newFriend, function (data) {
+          //Grab the result from the AJAX post so that the best match's name and photo are displayed.
+          $("#matchName").text(data.name);
+          $("#matchPic").attr("src", data.Photo);
+        });
 
+        //clear form after submission
+        $('#name').val();
+        $('#photo').val();
+        $('#question1').val();
+        $('#question2').val();
+        $('#question3').val();
+        $('#question4').val();
+        $('#question5').val();
+        $('#question6').val();
+        $('#question7').val();
+        $('#question8').val();
+        $('#question9').val();
+        $('#question10').val();
+      } else {
+        alert("Please fill out ALL fields before submitting survey!")
+      }
 
+    })
+
+  })
 </script>
