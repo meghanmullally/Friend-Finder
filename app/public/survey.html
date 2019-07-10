@@ -48,7 +48,7 @@
         <div class="form-group col-md-4">
           <label for="question1">Question 1</label>
           <p>You prefer to stay in on the weekends</p>
-          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+          <select class="custom-select mr-sm-2" id="question1">
             <option selected>Select an Option</option>
             <option value="1">1(Strongly Disagree)</option>
             <option value="2">2</option>
@@ -62,7 +62,7 @@
           <div class="form-group col-md-4">
           <label for="question2">Question 2</label>
           <p>You like the outdoors example: camping and hiking</p>
-          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+          <select class="custom-select mr-sm-2" id="question2">
             <option selected>Select an Option</option>
             <option value="1">1(Strongly Disagree)</option>
             <option value="2">2</option>
@@ -76,7 +76,7 @@
           <div class="form-group col-md-4">
           <label for="question3">Question 3</label>
           <p>You come off too strong</p>
-          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+          <select class="custom-select mr-sm-2" id="question3">
             <option selected>Select an Option</option>
             <option value="1">1(Strongly Disagree)</option>
             <option value="2">2</option>
@@ -90,7 +90,7 @@
           <div class="form-group col-md-4">
           <label for="question4">Question 4</label>
           <p>People tend to say you eat too much</p>
-          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+          <select class="custom-select mr-sm-2" id="question4">
             <option selected>Select an Option</option>
             <option value="1">1(Strongly Disagree)</option>
             <option value="2">2</option>
@@ -104,7 +104,7 @@
           <div class="form-group col-md-4">
           <label for="question5">Question 5</label>
           <p>You enjoy going to a coffee shop and reading a nice book</p>
-          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+          <select class="custom-select mr-sm-2" id="question5">
             <option selected>Select an Option</option>
             <option value="1">1(Strongly Disagree)</option>
             <option value="2">2</option>
@@ -118,7 +118,7 @@
           <div class="form-group col-md-4">
           <label for="question6">Question 6</label>
           <p>You rarely get upset over things</p>
-          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+          <select class="custom-select mr-sm-2" id="question6">
             <option selected>Select an Option</option>
             <option value="1">1(Strongly Disagree)</option>
             <option value="2">2</option>
@@ -132,7 +132,7 @@
           <div class="form-group col-md-4">
           <label for="question7">Question 7</label>
           <p>You like to travel</p>
-          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+          <select class="custom-select mr-sm-2" id="question7">
             <option selected>Select an Option</option>
             <option value="1">1(Strongly Disagree)</option>
             <option value="2">2</option>
@@ -146,7 +146,7 @@
           <div class="form-group col-md-4">
           <label for="question8">Question 8</label>
           <p>You feel more energetic after spending time in a big group</p>
-          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+          <select class="custom-select mr-sm-2" id="question8">
             <option selected>Select an Option</option>
             <option value="1">1(Strongly Disagree)</option>
             <option value="2">2</option>
@@ -160,7 +160,7 @@
           <div class="form-group col-md-4">
           <label for="question9">Question 9</label>
           <p>You are more of a logical person than emotional</p>
-          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+          <select class="custom-select mr-sm-2" id="question9">
             <option selected>Select an Option</option>
             <option value="1">1(Strongly Disagree)</option>
             <option value="2">2</option>
@@ -174,7 +174,7 @@
           <div class="form-group col-md-4">
           <label for="question10">Question 10</label>
           <p>Do you think of yourself as a spontaneous person?</p>
-          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+          <select class="custom-select mr-sm-2" id="question10">
             <option selected>Select an Option</option>
             <option value="1">1(Strongly Disagree)</option>
             <option value="2">2</option>
@@ -215,3 +215,27 @@
 </body>
 
 </html>
+
+<script>
+
+var newFriend = {
+ Name: $("name").val().trim(),
+ Photo: $("photo").val().trim(),
+ Score:  [
+          $("#question1").val(),
+          $("#question2").val(),
+          $("#question3").val(),
+          $("#question4").val(),
+          $("#question5").val(),
+          $("#question6").val(),
+          $("#question7").val(),
+          $("#question8").val(),
+          $("#question9").val(),
+          $("#question10").val()       
+        ]
+
+}
+
+
+
+</script>

@@ -1,4 +1,3 @@
-module.exports = friends;
 
 var friends = [
 
@@ -57,3 +56,5 @@ var friends = [
 
 
 ]
+
+module.exports = friends;
