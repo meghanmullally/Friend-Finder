@@ -22,7 +22,7 @@ module.exports = function (app) {
   // POST route for api/friends 
   // handle incoming survey results & add new friends 
 
-  app.post('api/friends', function (req, res) {
+  app.post('/api/friends', function (req, res) {
 
     // the user input and response 
 
