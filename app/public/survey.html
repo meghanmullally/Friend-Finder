@@ -12,41 +12,46 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <!--CSS-->
-  <link rel="stylesheet" href="/app/assets/css/styles.css">
+  <!-- <link rel="stylesheet" href="/app/assets/css/styles.css"> -->
 
 </head>
 
 <body>
 
 
-  <div class="jumbotron jumbotron-fluid" id="survey-jumbo">
+  <div class="jumbotron jumbotron-fluid" id="survey-jumbo" style="background-image: url('https://images.pexels.com/photos/1645634/pexels-photo-1645634.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+    background-repeat: no-repeat; background-size: cover; height: auto; background-position: fixed; color: whitesmoke;
+    font-weight: bolder; font-family: 'Courier New' , Courier, monospace;">
     <div class="container">
       <h1 class="display-3">Friend Finder Survey</h1>
     </div>
   </div>
 
-  <div class="container" id="form-container">
+  <div class="container" id="form-container" style="margin: 0 auto;
+  padding: 0 auto;
+  padding-bottom: 20px;
+  border: lightslategray solid 2px;">
 
     <h2>Survey Questions:</h2>
 
     <form>
       <div class="form-row">
         <div class="col-md-6">
-          <label for="name">Name (Required)</label>
-          <input type="text" class="form-control" class="validate" required>
+          <label for="name" style="font-weight: bold;">Name (Required)</label>
+          <input type="text" class="form-control" id="name" class="validate" required>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="photo">Link to Photo Image (Required)</label>
-          <input type="photo" class="form-control" id="Photo" class="validate" required>
+          <label for="photo" style="font-weight: bold;">Link to Photo Image (Required)</label>
+          <input type="photo" class="form-control" id="photo" class="validate" required>
         </div>
 
       </div>
 
       <div class="form-group">
         <div class="form-group col-md-4">
-          <label for="question1">Question 1</label>
+          <label for="question1" style="font-weight: bold;">Question 1</label>
           <p>You prefer to stay in on the weekends</p>
           <select class="custom-select mr-sm-2" class="browser-default" id="question1">
             <option selected>Select an Option</option>
@@ -60,7 +65,7 @@
       </div>
       <div class="form-group">
         <div class="form-group col-md-4">
-          <label for="question2">Question 2</label>
+          <label for="question2" style="font-weight: bold;">Question 2</label>
           <p>You like the outdoors example: camping and hiking</p>
           <select class="custom-select mr-sm-2" class="browser-default" id="question2">
             <option selected>Select an Option</option>
@@ -74,7 +79,7 @@
       </div>
       <div class="form-group">
         <div class="form-group col-md-4">
-          <label for="question3">Question 3</label>
+          <label for="question3" style="font-weight: bold;">Question 3</label>
           <p>You come off too strong</p>
           <select class="custom-select mr-sm-2" class="browser-default" id="question3">
             <option selected>Select an Option</option>
@@ -88,7 +93,7 @@
       </div>
       <div class="form-group">
         <div class="form-group col-md-4">
-          <label for="question4">Question 4</label>
+          <label for="question4" style="font-weight: bold;">Question 4</label>
           <p>People tend to say you eat too much</p>
           <select class="custom-select mr-sm-2" class="browser-default" id="question4">
             <option selected>Select an Option</option>
@@ -102,7 +107,7 @@
       </div>
       <div class="form-group">
         <div class="form-group col-md-4">
-          <label for="question5">Question 5</label>
+          <label for="question5" style="font-weight: bold;">Question 5</label>
           <p>You enjoy going to a coffee shop and reading a nice book</p>
           <select class="custom-select mr-sm-2" class="browser-default" id="question5">
             <option selected>Select an Option</option>
@@ -116,7 +121,7 @@
       </div>
       <div class="form-group">
         <div class="form-group col-md-4">
-          <label for="question6">Question 6</label>
+          <label for="question6" style="font-weight: bold;">Question 6</label>
           <p>You rarely get upset over things</p>
           <select class="custom-select mr-sm-2" class="browser-default" id="question6">
             <option selected>Select an Option</option>
@@ -130,7 +135,7 @@
       </div>
       <div class="form-group">
         <div class="form-group col-md-4">
-          <label for="question7">Question 7</label>
+          <label for="question7" style="font-weight: bold;">Question 7</label>
           <p>You like to travel</p>
           <select class="custom-select mr-sm-2" class="browser-default" id="question7">
             <option selected>Select an Option</option>
@@ -144,7 +149,7 @@
       </div>
       <div class="form-group">
         <div class="form-group col-md-4">
-          <label for="question8">Question 8</label>
+          <label for="question8" style="font-weight: bold;">Question 8</label>
           <p>You feel more energetic after spending time in a big group</p>
           <select class="custom-select mr-sm-2" class="browser-default" id="question8">
             <option selected>Select an Option</option>
@@ -158,7 +163,7 @@
       </div>
       <div class="form-group">
         <div class="form-group col-md-4">
-          <label for="question9">Question 9</label>
+          <label for="question9" style="font-weight: bold;">Question 9</label>
           <p>You are more of a logical person than emotional</p>
           <select class="custom-select mr-sm-2" class="browser-default" id="question9">
             <option selected>Select an Option</option>
@@ -172,7 +177,7 @@
       </div>
       <div class="form-group">
         <div class="form-group col-md-4">
-          <label for="question10">Question 10</label>
+          <label for="question10" style="font-weight: bold;">Question 10</label>
           <p>Do you think of yourself as a spontaneous person?</p>
           <select class="custom-select mr-sm-2" class="browser-default" id="question10">
             <option selected>Select an Option</option>
@@ -193,13 +198,19 @@
   </div>
 
 
-  <div class="footer navbar-fixed-bottom" id="survey-footer">
+  <div class="footer navbar-fixed-bottom" id="survey-footer" style="margin: 10px;
+  padding: 20px;
+  text-align: center;">
     <a href="/api/friends">API Friend List</a> | <a href="https://github.com/meghanmullally/Friend-Finder">Github
       Repo</a> | <a href="https://github.com/meghanmullally/Friend-Finder">Heroku Link</a>
   </div>
 
 
   <!-- Optional JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -219,7 +230,7 @@
   $(document).ready(function () {
 
     $("#submitBtn").on("click", function () {
-
+      event.preventDefault();
       // form validating 
       function validateForm() {
 
@@ -241,8 +252,8 @@
 
       if (validateForm() === true) {
         var newFriend = {
-          Name: $("name").val().trim(),
-          Photo: $("photo").val().trim(),
+          Name: $("#name").val().trim(),
+          Photo: $("#photo").val().trim(),
           Score: [
             $("#question1").val(),
             $("#question2").val(),
