@@ -10,13 +10,12 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 
-// basic route that sends the user first to the page 
-app.get('/', function(req, res) {
-  res.send('hello world')
-});
+// Add the application routes
+require(path.join(__dirname, './app/routing/apiRoutes'))(app);
+require(path.join(__dirname, './app/routing/htmlRoutes'))(app);
 
 
 // starts the server to begin listening 
 app.listen(PORT, function() {
-  console.log('listening on: ' + PORT)
+  console.log('Friend Finder is listening on: ' + PORT)
 });
