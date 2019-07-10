@@ -13,7 +13,7 @@ module.exports = function (app) {
   // GET route with the api/friends 
   // used to display JSON of all possible friends 
 
-  app.get('api/friends', function (req, res) {
+  app.get('/api/friends', function (req, res) {
     res.json(friends);
 
   });
@@ -42,7 +42,7 @@ module.exports = function (app) {
       for (var y = 0; y < userRep.length; y++) {
 
         // math abs returns the absolute value of a number 
-        diff += Math.abs(friends[i].scores[y] - userRep[y]);
+        diff += Math.abs(parseInt(friends[i].scores[y]) - parseInt(userRep[y]));
       }
 
       if (diff < totalDiff) {
@@ -50,7 +50,6 @@ module.exports = function (app) {
         totalDiff = diff;
         matchName = friends[i].name;
         matchImage = friends[i].photo;
-
 
       }
 
