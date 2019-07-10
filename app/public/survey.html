@@ -191,10 +191,25 @@
       </div>
       <button type="submit" id="submitBtn" class="btn btn-primary">Submit</button>
 
-
     </form>
 
-
+    <div id="modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h3 class="modal-title">YAYY LET'S BE BFFS!</h1>
+            </div>
+            <div class="modal-body">
+              <h2 id="matchName"></h2>
+              <img id="matchPic" src="#">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 
 
@@ -231,6 +246,24 @@
 <script>
   $(document).ready(function () {
 
+
+    $('.modal').modal({
+      // Modal can be dismissed by clicking outside of the modal
+        dismissible: false, 
+        // Opacity of modal background
+        opacity: .5, 
+        // Transition in duration
+        inDuration: 300, 
+        // Transition out duration
+				outDuration: 200,  // Starting top style attribute
+        startingTop: '4%',
+        // Ending top style attribute
+        endingTop: '10%' 
+      
+			});
+
+
+
     $("#submitBtn").on("click", function (event) {
       event.preventDefault();
       // form validating 
@@ -248,8 +281,7 @@
             isValid = false;
           }
         });
-        console.log("the survey is submitted!");
-
+      
         return isValid;
       }
 
@@ -278,8 +310,12 @@
         //AJAX posts the data to friends API.
         $.post(currentURL + "/api/friends", newFriend, function (data) {
           //Grab the result from the AJAX post so that the best match's name and photo are displayed.
-          $("#matchName").text(data.name);
-          $("#matchPic").attr("src", data.Photo);
+          $("#matchName").text(data.matchName);
+          $("#matchPic").attr("src", data.matchImage);
+
+          // Pop open the modal dialog
+          $("#modal").modal("toggle");
+
         });
 
         //clear form after submission
